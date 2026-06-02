@@ -12,7 +12,7 @@ public class Main
         String edad = boton.nextLine();
 
         System.out.print("Ingrese el índice académico: ");
-        double indiceAcademico = sc.nextDouble();
+        double indiceAcademico = boton.nextDouble();
 
         try
         {
