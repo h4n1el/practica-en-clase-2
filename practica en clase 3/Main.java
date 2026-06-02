@@ -23,8 +23,11 @@ public class Main
         catch (EstudianteValidator e)
         {
             System.out.println("Error: " + e.getMessage());
+        }finally 
+        {
+            System.out.println("esto es el final");
         }
 
-        boton.close();
+        
     }
 }
