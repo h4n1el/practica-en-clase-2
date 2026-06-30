@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<VBox alignment="CENTER" spacing="10.0" stylesheets="@Primero.css" styleClass="root"
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.Proyecto">
+    
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />  
+    </padding>
+
+    <Label text="Conversor de Monedas" styleClass="title"/>
+
+    <VBox spacing="10.0">
+        <Label text="Monto en pesos dominicanos" styleClass="field-title"/> 
+        <TextField fx:id="txtMonto" onKeyPressed="#handleKeyPressed" promptText="Ingrese el monto en pesos dominicanos"/>
+    </VBox>
+
+    <VBox spacing="10.0">
+        <Label text="Monto Destino" styleClass="field-title"/>
+        <ComboBox fx:id="Moneda" promptText="Seleccione una Moneda">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Dólar Americano"/>
+                    <String fx:value="Euro"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </VBox>
+
+    <HBox alignment="CENTER" spacing="10.0">
+        <Button fx:id="btnConvertir" text="Convertir" onAction="#handleConvertir" 
+                onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" 
+                styleClass="btn-primary"/>
+        <Button fx:id="btnLimpiar" text="Limpiar" onAction="#handleLimpiar" 
+                styleClass="btn-secondary"/>
+    </HBox>
+
+    <VBox spacing="10.0" alignment="CENTER">
+        <Label fx:id="lblResultado" text="Resultado" styleClass="result-label"/>
+        <Label fx:id="Estado" text="Estado" styleClass="status-label"/>
+    </VBox>
+
+</VBox>
+
+    
