@@ -98,11 +98,12 @@ public class Proyecto {
         double resultado = 0;
         String simbolo = "";
 
+        String min = monedaSeleccionada.ToLowerCase();
        
-        if (monedaSeleccionada.contains("Dolar")) {
+        if (min.contains("Dolar")|| min.contains("dólar")) {
             resultado = monto / DOLAR;
             simbolo = "$";
-        } else if (monedaSeleccionada.contains("Euro")) {
+        } else if (min.contains("Euro")|| min.contains("euro")) {
             resultado = monto / EURO;
             simbolo = "€";
         }
