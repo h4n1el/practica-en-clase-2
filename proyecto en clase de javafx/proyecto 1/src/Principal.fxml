@@ -30,7 +30,7 @@
         <ComboBox fx:id="Moneda" promptText="Seleccione una Moneda">
             <items>
                 <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="Dólar Americano"/>
+                    <String fx:value="Dolar Americano"/>
                     <String fx:value="Euro"/>
                 </FXCollections>
             </items>
