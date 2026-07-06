@@ -86,7 +86,7 @@ public class Proyecto {
         try {
             cantidad = Integer.parseInt(cantidadStr);
         } catch (NumberFormatException e) {
-            Estado.setText("Ingrese un número válido para la cantidad.");
+            Estado.setText("Ingrese un numero valido para la cantidad.");
             return;
         }
 
@@ -98,7 +98,7 @@ public class Proyecto {
         }
 
         Resultado.setText("Resultado: RD$" + total);
-        Estado.setText("Estado: Cálculo realizado correctamente.");
+        Estado.setText("Estado: Calculo realizado heavy.");
     }
 }
   
