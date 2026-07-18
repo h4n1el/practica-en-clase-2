@@ -47,20 +47,20 @@ public class ArchivoUtil
             while ((lineas = bf.readLine()) != null) {
                 if (lineas.isBlank()) continue;
  
-                // limit = -1 conserva campos vacios al final (ej: telefono sin llenar)
+                
                 String[] parte = lineas.split("\\|", -1);
                 if (parte.length == 10) {
                     listaCitas.add(new Cita(
-                        parte[0], // codigoCita
-                        parte[1], // nombrePaciente
-                        parte[2], // cedula
-                        parte[3], // telefono
-                        parte[4], // medico
-                        parte[5], // especialidad
-                        parte[6], // fechaCita
-                        parte[7], // hora
-                        parte[8], // motivoConsulta
-                        parte[9]  // estado
+                        parte[0], 
+                        parte[1], 
+                        parte[2], 
+                        parte[3], 
+                        parte[4], 
+                        parte[5], 
+                        parte[6], 
+                        parte[7], 
+                        parte[8], 
+                        parte[9]  
                     ));
                 } else {
                     System.out.println("linea con formato invalido, se omite: " + lineas);
