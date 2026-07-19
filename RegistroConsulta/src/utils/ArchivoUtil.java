@@ -13,7 +13,7 @@ public class ArchivoUtil
     public static void guardarCita(Cita cita)
     {
         try {
-            FileWriter fw = new FileWriter("Cita.txt", true);
+            FileWriter fw = new FileWriter("src/Cita.txt", true);
             fw.write(cita.getCodigoCita() + "|" +
             cita.getNombrePaciente()+ "|" +
             cita.getCedula() + "|" +
@@ -39,7 +39,7 @@ public class ArchivoUtil
     {
         ArrayList<Cita> listaCitas = new ArrayList<>();
  
-        try (FileReader fr = new FileReader("Cita.txt");
+        try (FileReader fr = new FileReader("src/Cita.txt");
              BufferedReader bf = new BufferedReader(fr)) {
  
             String lineas;
