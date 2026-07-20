@@ -94,6 +94,9 @@ public class Principal
  
     @FXML
     private ComboBox<String> cmbMedico;
+
+    @FXML
+    private ObservableList<Cita> lista = FXCollections.observableArrayList()
  
     @FXML
     public void initialize()
@@ -119,10 +122,9 @@ public class Principal
     @FXML
     public void cargarConsulta()
     {
-        ObservableList<Cita> lista = FXCollections.observableArrayList(
-            ArchivoUtil.leerListaCita()
-        );
-        TablaCita.setItems(lista);
+       lista.clear();
+       lista.addAll(Archivo.leerListaCita);
+       TablaCita.add(lista);
     }
  
     @FXML
