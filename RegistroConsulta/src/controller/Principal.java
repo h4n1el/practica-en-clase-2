@@ -124,7 +124,7 @@ public class Principal
     {
        lista.clear();
        lista.addAll(Archivo.leerListaCita);
-       TablaCita.add(lista);
+       TablaCita.setItems(lista);
     }
  
     @FXML
